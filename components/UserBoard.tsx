@@ -78,11 +78,13 @@ function StatusColumn({
                   layout: { type: "spring", damping: 20, stiffness: 200 },
                   opacity: { duration: 0.2 },
                 }}
-                className={`px-3 py-1 rounded-full text-label-sm shadow-sm ${
-                  user.nickname === myNickname
+                className={`px-3 py-1 rounded-full text-label-sm shadow-sm transition-all ${
+                  user.nickname === myNickname && status !== "finished"
                     ? "bg-primary-container text-on-primary-container font-bold ring-1 ring-primary/30"
+                    : user.nickname === myNickname && status === "finished"
+                    ? "bg-surface-dim text-on-surface-variant font-bold ring-1 ring-outline/30 grayscale"
                     : status === "finished"
-                    ? "bg-surface-dim text-on-surface-variant grayscale-[60%]"
+                    ? "bg-surface-dim text-on-surface-variant grayscale opacity-70"
                     : "bg-surface-container-high text-on-surface border border-outline-variant/30"
                 }`}
               >

@@ -57,7 +57,7 @@ export default function NicknameModal({ onSubmit }: NicknameModalProps) {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="bg-surface-container-lowest rounded-2xl p-lg shadow-overlay max-w-md w-full mx-4 border border-outline-variant"
+            className="bg-surface-container-lowest rounded-2xl p-6 md:p-10 shadow-overlay max-w-md w-full mx-4 border border-outline-variant"
           >
             <div className="text-center mb-md">
               <div className="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mx-auto mb-md">

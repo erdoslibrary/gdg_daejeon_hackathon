@@ -64,7 +64,39 @@ export default function RecipePanel() {
         transition={{ delay: 0.4 }}
         className="bg-surface-container-lowest rounded-xl p-md shadow-sm border border-outline-variant"
       >
-        <h3 className="text-headline-md text-on-surface mb-md">조리 순서</h3>
+        <div className="flex items-center justify-between mb-md">
+          <h3 className="text-headline-md text-on-surface">조리 순서</h3>
+          <span className="text-label-sm text-on-surface-variant bg-surface-container-high px-2 py-1 rounded-md">
+            {completedSteps.size}/{STEPS.length} 완료
+          </span>
+        </div>
+
+        {/* 진행률 바 */}
+        <div className="w-full h-1.5 bg-surface-container-high rounded-full mb-md overflow-hidden">
+          <motion.div
+            className="h-full bg-primary rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${(completedSteps.size / STEPS.length) * 100}%` }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          />
+        </div>
+
+        {/* 전체 완료 축하 */}
+        <AnimatePresence>
+          {completedSteps.size === STEPS.length && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="bg-primary-container/30 border border-primary/20 rounded-lg p-3 mb-md text-center"
+            >
+              <p className="text-label-md text-primary">
+                🎉 요리 완성! 이제 맛있게 드세요~
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <ul className="space-y-sm">
           {STEPS.map((step, idx) => {
             const isDone = completedSteps.has(idx);
