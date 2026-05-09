@@ -57,16 +57,16 @@ export default function NicknameModal({ onSubmit }: NicknameModalProps) {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="bg-surface-container-lowest rounded-2xl p-6 md:p-10 shadow-overlay max-w-md w-full mx-4 border border-outline-variant"
+            className="bg-surface-container-lowest rounded-2xl p-6 md:p-10 shadow-overlay w-[calc(100%-32px)] max-w-[440px] min-w-[280px] md:min-w-[400px] border border-outline-variant"
           >
-            <div className="text-center mb-md">
-              <div className="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mx-auto mb-md">
+            <div className="text-center mb-6 md:mb-8">
+              <div className="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mx-auto mb-4">
                 <Flame className="w-8 h-8 text-on-secondary-container" />
               </div>
-              <h2 className="text-headline-lg text-on-surface mb-2">
+              <h2 className="text-headline-md md:text-headline-lg text-on-surface mb-2 leading-tight">
                 오늘의 주방에 오신 걸<br />환영합니다!
               </h2>
-              <p className="text-body-md text-on-surface-variant">
+              <p className="text-body-md text-on-surface-variant px-2">
                 자취생의 영혼까지 끌어모은 요리, 함께해요.
               </p>
             </div>
