@@ -94,4 +94,4 @@ pnpm dev
 | 15:30 ~ 17:00 | 최종 발표 및 시상 (팀당 3분 스피치) |
 
 ---
-**상상하라, 구현하라, 증명하라: Build with AI Hackathon 2026 in Daejeon**
+[**상상하라, 구현하라, 증명하라: Build with AI Hackathon 2026 in Daejeon**](https://ticketa.co/event/rshxbzui)

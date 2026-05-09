@@ -50,5 +50,9 @@ next-env.d.ts
 # System files
 Thumbs.db
 Desktop.ini
+# AI & Phase files
+.agents/
+phase/
+
 # Logs
 *.log
