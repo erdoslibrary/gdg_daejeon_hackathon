@@ -31,8 +31,14 @@ export default function NicknameModal({ onSubmit }: NicknameModalProps) {
       onSubmit(stored);
       return;
     }
-    setIsVisible(true);
-    setPlaceholder(RANDOM_NAMES[Math.floor(Math.random() * RANDOM_NAMES.length)]);
+    
+    // 에러 방지: useEffect 내에서 즉시 setState를 호출하는 대신 다음 틱으로 미룹니다.
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      setPlaceholder(RANDOM_NAMES[Math.floor(Math.random() * RANDOM_NAMES.length)]);
+    }, 0);
+    
+    return () => clearTimeout(timer);
   }, [onSubmit]);
 
   const handleSubmit = (e: React.FormEvent) => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, ChefHat, BookOpen, Users, Settings, HelpCircle, RotateCcw } from "lucide-react";
+import { Home, ChefHat, BookOpen, Users, HelpCircle, RotateCcw } from "lucide-react";
 import { createClient } from "@/lib/supabase";
 
 interface SidebarProps {
