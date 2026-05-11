@@ -123,3 +123,5 @@ pnpm dev
 >- 그래도 하다보면 되네요? 이게 꽤 매력적. 4시간 몰입이 가장 큰 소득입니다.
 > - 가면 안되는 타이밍이었는데, 티켓도 공짜로 생기고 광마(狂馬)에 꽂혀서 갔... <br>
 아 재밌었당
+> - 제가 만든 건 아니지만, 큰 동기가 된 [온라인 모각코 서비스-잔디 심고 갈래?](https://commitplease.com/) 놀러오십셔~ 🫡
+<img width="2071" height="939" alt="image" src="https://github.com/user-attachments/assets/9f62930d-0d8c-4a10-af8d-89f11bc8c3a2" />
